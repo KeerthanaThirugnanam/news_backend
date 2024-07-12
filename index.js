@@ -1,6 +1,6 @@
 import express from "express"
 //const express =require("express") 
-import bcrypt from "bcrypt"
+//import bcrypt from "bcrypt"
  import cors from "cors"
 
 
@@ -52,17 +52,11 @@ app.post("/", async(req,res)=>{
         if(check){
             
           
-
-            const passwordMatch = bcrypt.compare(password, check.password);
-    
-            if (passwordMatch) {
-                console.log("Password is correct.");
-                res.json("exist");
-            }else {
-                console.log("Incorrectpassword");
-                res.json("Inncorrectpassword");
+            console.log("Password is correct.");
+            res.json("exist");
             
-            }
+
+        
 
         }
 
